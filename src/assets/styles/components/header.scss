@@ -1,0 +1,12 @@
+.header-component {
+  padding: 20px;
+  background: var(--color-white);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  .title {
+    background: var(--color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
