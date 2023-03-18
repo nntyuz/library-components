@@ -1,0 +1,49 @@
+.w-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.j-between {
+    justify-content: space-between;
+  }
+
+  &.j-center {
+    justify-content: center;
+  }
+
+  &.j-start {
+    justify-content: flex-start;
+  }
+
+  &.j-end {
+    justify-content: flex-end;
+  }
+
+  &.a-center {
+    align-items: center;
+  }
+
+  &.a-end {
+    align-items: flex-end;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.a-right {
+  text-align: right;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
