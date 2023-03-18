@@ -1,9 +1,11 @@
 html {
-  --color-main: #C9F9FF;
-  --color-secondary: #BFD0E0;
+  --color-main: #E21143;
+  --color-secondary: #FFB03A;
 
-  --color-black: #000;
-  --color-white: #fff;
+  --color-gradient: linear-gradient(60deg, #E21143, #FFB03A);
+
+  --color-black: #222;
+  --color-white: #f1f1f1;
 
   --transition-default: 300ms ease;
 }
