@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="$emit('click')">
     <component :is="name" class="icon-component"></component>
   </div>
 </template>
@@ -26,7 +26,8 @@ export default {
   },
   props: {
     name: String
-  }
+  },
+  emits: ['click']
 }
 </script>
 
