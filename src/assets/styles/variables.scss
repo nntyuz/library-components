@@ -2,7 +2,7 @@ html {
   --color-main: #E21143;
   --color-secondary: #FFB03A;
 
-  --color-gradient: linear-gradient(60deg, #E21143, #FFB03A);
+  --color-gradient: linear-gradient(60deg, var(--color-main), var(--color-secondary));
 
   --color-black: #222;
   --color-white: #f1f1f1;
