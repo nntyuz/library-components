@@ -1,13 +1,16 @@
 html {
   --color-main: #E21143;
   --color-secondary: #FFB03A;
-
   --color-gradient: linear-gradient(60deg, var(--color-main), var(--color-secondary));
+
+  --color-success: #3CC13B;
 
   --color-black: #222;
   --color-white: #f1f1f1;
+  --color-gray: #d9d9d9;
+
 
   --border-radius-default: 20px;
-  --border-radius-button: 8px;
+  --border-radius-small: 8px;
   --transition-default: 300ms ease;
 }
