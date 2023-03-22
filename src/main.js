@@ -6,6 +6,7 @@ import vButton from './components/core/button.vue'
 import vInput from './components/core/input.vue'
 import vRadio from './components/core/radio-button.vue'
 import vCheckbox from './components/core/checkbox.vue'
+import vTextarea from './components/core/textarea.vue'
 
 import '../src/assets/styles/main.scss'
 import '../src/assets/styles/reset.scss'
@@ -17,4 +18,5 @@ app
   .component('vInput', vInput)
   .component('vRadio', vRadio)
   .component('vCheckbox', vCheckbox)
+  .component('vTextarea', vTextarea)
 app.mount('#app')
