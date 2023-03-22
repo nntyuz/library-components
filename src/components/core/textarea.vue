@@ -6,8 +6,8 @@
       :placeholder="placeholder"
       :disabled="disabled"
       @input="input($event)"
-      @focus="focus"
-      @blur="blur"
+      @focus="isFocus = true"
+      @blur="isFocus = false"
     />
   </div>
 </template>
@@ -39,12 +39,6 @@ export default {
     }
   },
   methods: {
-    focus() {
-      this.isFocus = true
-    },
-    blur() {
-      this.isFocus = false
-    },
     input(e) {
       this.$emit('update:modelValue', e.target.value)
       e.target.style.height = 'auto'
