@@ -5,6 +5,7 @@
       <icon-card />
       <button-card />
       <input-card />
+      <radio-button-card />
     </div>
   </section>
 </template>
@@ -14,12 +15,15 @@ import headerComponent from './components/header.vue'
 import iconCard from './components/icon-card.vue'
 import buttonCard from './components/button-card.vue'
 import inputCard from './components/input-card.vue'
+import radioButtonCard from './components/radio-button-card.vue'
+
 export default {
   components: {
     headerComponent,
     iconCard,
     buttonCard,
-    inputCard
+    inputCard,
+    radioButtonCard
   },
   data() {
     return {}
