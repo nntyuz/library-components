@@ -12,6 +12,6 @@
 
 <script>
 export default {
-  name: 'ChevronUp'
+  name: 'Chevron-up'
 }
 </script>
