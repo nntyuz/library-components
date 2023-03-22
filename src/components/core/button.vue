@@ -16,7 +16,7 @@ export default {
     icon: String,
     iconPosition: {
       type: String,
-      default: 'left'
+      default: 'right'
     },
     size: {
       type: String,
@@ -28,9 +28,9 @@ export default {
   computed: {
     classes() {
       const { type, icon, iconPosition, size, disabled } = this
-      let result = `button-component type-${type} size-${size} icon-position-${iconPosition}`
+      let result = `button-component flex a-center j-center type-${type} size-${size}`
       if (disabled) result += ' disabled'
-      if (icon) result += ' gap-20'
+      if (icon) result += ` icon-position-${iconPosition} gap-8`
       return result
     }
   }
