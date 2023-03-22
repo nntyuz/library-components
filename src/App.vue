@@ -8,6 +8,7 @@
       <radio-button-card />
       <checkbox-card />
       <textarea-card />
+      <multi-input-card />
     </div>
   </section>
 </template>
@@ -20,6 +21,8 @@ import inputCard from './components/input-card.vue'
 import radioButtonCard from './components/radio-button-card.vue'
 import checkboxCard from './components/checkbox-card.vue'
 import textareaCard from './components/textarea-card.vue'
+import multiInputCard from './components/multi-input-card.vue'
+
 export default {
   components: {
     headerComponent,
@@ -28,7 +31,8 @@ export default {
     inputCard,
     radioButtonCard,
     checkboxCard,
-    textareaCard
+    textareaCard,
+    multiInputCard
   },
   data() {
     return {}
