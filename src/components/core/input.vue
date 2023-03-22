@@ -15,6 +15,7 @@
     <vIcon
       v-if="type === 'password'"
       :name="isPasswordShow ? 'eye' : 'eye-off'"
+      class="c-pointer"
       @click="isPasswordShow = !isPasswordShow"
     />
     <vIcon v-if="error || success" :name="error ? 'error' : 'success'" />
