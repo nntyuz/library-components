@@ -16,6 +16,7 @@ import eyeOff from '../icons/eye-off.vue'
 import eye from '../icons/eye.vue'
 import plus from '../icons/plus.vue'
 import search from '../icons/search.vue'
+import success from '../icons/success.vue'
 
 export default {
   name: 'vIcon',
@@ -30,7 +31,8 @@ export default {
     eyeOff,
     eye,
     plus,
-    search
+    search,
+    success
   },
   props: {
     name: String
