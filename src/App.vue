@@ -6,6 +6,7 @@
       <button-card />
       <input-card />
       <radio-button-card />
+      <checkbox-card />
     </div>
   </section>
 </template>
@@ -16,6 +17,7 @@ import iconCard from './components/icon-card.vue'
 import buttonCard from './components/button-card.vue'
 import inputCard from './components/input-card.vue'
 import radioButtonCard from './components/radio-button-card.vue'
+import checkboxCard from './components/checkbox-card.vue'
 
 export default {
   components: {
@@ -23,7 +25,8 @@ export default {
     iconCard,
     buttonCard,
     inputCard,
-    radioButtonCard
+    radioButtonCard,
+    checkboxCard
   },
   data() {
     return {}
