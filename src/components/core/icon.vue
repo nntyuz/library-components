@@ -7,6 +7,7 @@
 <script>
 import arrowLeft from '../icons/arrow-left.vue'
 import arrowRight from '../icons/arrow-right.vue'
+import check from '../icons/check.vue'
 import chevronDown from '../icons/chevron-down.vue'
 import chevronUp from '../icons/chevron-up.vue'
 import clear from '../icons/clear.vue'
@@ -23,6 +24,7 @@ export default {
   components: {
     arrowLeft,
     arrowRight,
+    check,
     chevronDown,
     chevronUp,
     clear,
