@@ -5,8 +5,7 @@
       :value="modelValue"
       :placeholder="placeholder"
       :disabled="disabled"
-      @input="$emit('update:modelValue', $event.target.value)"
-      @change="resize($event)"
+      @input="input($event)"
       @focus="focus"
       @blur="blur"
     />
@@ -46,7 +45,8 @@ export default {
     blur() {
       this.isFocus = false
     },
-    resize(e) {
+    input(e) {
+      this.$emit('update:modelValue', e.target.value)
       e.target.style.height = 'auto'
       e.target.style.height = `${e.target.scrollHeight}px`
     }
