@@ -59,9 +59,8 @@ export default {
       if (disabled) result += ' disabled'
       if (error) result += ' error gap-8'
       if (success) result += ' success gap-8'
-      if (clear) result += ' gap-8'
+      if (clear || type === 'password') result += ' gap-8'
       if (isFocus) result += ' focus'
-      if (type === 'password') result += ' gap-8'
       return result
     },
     computedType() {
