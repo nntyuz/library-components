@@ -5,6 +5,7 @@ import vIcon from './components/core/icon.vue'
 import vButton from './components/core/button.vue'
 import vInput from './components/core/input.vue'
 import vRadio from './components/core/radio-button.vue'
+import vCheckbox from './components/core/checkbox.vue'
 
 import '../src/assets/styles/main.scss'
 import '../src/assets/styles/reset.scss'
@@ -15,4 +16,5 @@ app
   .component('vButton', vButton)
   .component('vInput', vInput)
   .component('vRadio', vRadio)
+  .component('vCheckbox', vCheckbox)
 app.mount('#app')
