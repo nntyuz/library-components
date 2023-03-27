@@ -8,6 +8,7 @@ import vRadio from './components/core/radio-button.vue'
 import vCheckbox from './components/core/checkbox.vue'
 import vTextarea from './components/core/textarea.vue'
 import vMultiInput from './components/core/multi-input.vue'
+import vSelect from './components/core/select.vue'
 
 import '../src/assets/styles/main.scss'
 import '../src/assets/styles/reset.scss'
@@ -21,4 +22,5 @@ app
   .component('vCheckbox', vCheckbox)
   .component('vTextarea', vTextarea)
   .component('vMultiInput', vMultiInput)
+  .component('vSelect', vSelect)
 app.mount('#app')
