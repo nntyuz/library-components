@@ -10,6 +10,7 @@
       <textarea-card />
       <multi-input-card />
       <select-card />
+      <slider-card />
     </div>
   </section>
 </template>
@@ -24,6 +25,8 @@ import checkboxCard from './components/checkbox-card.vue'
 import textareaCard from './components/textarea-card.vue'
 import multiInputCard from './components/multi-input-card.vue'
 import selectCard from './components/select-card.vue'
+import sliderCard from './components/slider-card.vue'
+
 export default {
   components: {
     headerComponent,
@@ -34,7 +37,8 @@ export default {
     checkboxCard,
     textareaCard,
     multiInputCard,
-    selectCard
+    selectCard,
+    sliderCard
   },
   data() {
     return {}
