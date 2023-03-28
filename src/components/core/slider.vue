@@ -6,7 +6,7 @@
       :min="min"
       :max="max"
       :disabled="disabled"
-      class="slider"
+      class="slider w-100"
       @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
@@ -36,7 +36,7 @@ export default {
   computed: {
     classes() {
       const { disabled } = this
-      let result = 'slider-component flex a-center'
+      let result = 'slider-component w-100 flex a-center'
       if (disabled) result += ' disabled'
       return result
     }
