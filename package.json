@@ -10,9 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.2.47",
-    "pinia": "^2.0.30",
-    "sass": "^1.58.0",
-    "vue-router": "^4.1.6"
+    "sass": "^1.58.0"
   },
   "devDependencies": {
     "@prettier/plugin-pug": "^2.3.0",
