@@ -1,7 +1,7 @@
 <template>
   <div :class="classes">
     <div class="selected flex a-center j-between gap-8" @click="open">
-      {{ value }}
+      {{ modelValue || placeholder }}
       <vIcon name="chevronDown" />
     </div>
     <div class="options">
@@ -24,11 +24,10 @@ export default {
     options: Array,
     disabled: Boolean
   },
-  emits: ['input'],
+  emits: ['update:modelValue'],
   data() {
     return {
-      isOpen: false,
-      value: this.modelValue || this.placeholder
+      isOpen: false
     }
   },
   computed: {
@@ -46,8 +45,7 @@ export default {
       this.isOpen = !this.isOpen
     },
     select(option) {
-      this.$emit('input', option)
-      this.value = option
+      this.$emit('update:modelValue', option)
       this.isOpen = false
     }
   }
