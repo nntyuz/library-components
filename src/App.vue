@@ -11,6 +11,7 @@
       <multi-input-card />
       <select-card />
       <slider-card />
+      <switch-card />
     </div>
   </section>
 </template>
@@ -26,6 +27,7 @@ import textareaCard from './components/textarea-card.vue'
 import multiInputCard from './components/multi-input-card.vue'
 import selectCard from './components/select-card.vue'
 import sliderCard from './components/slider-card.vue'
+import switchCard from './components/switch-card.vue'
 
 export default {
   components: {
@@ -38,7 +40,8 @@ export default {
     textareaCard,
     multiInputCard,
     selectCard,
-    sliderCard
+    sliderCard,
+    switchCard
   },
   data() {
     return {}
