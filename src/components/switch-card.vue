@@ -1,5 +1,5 @@
 <template>
-  <section class="card flex a-center j-center column gap-20 w-100">
+  <section class="card">
     <h2>Switch:</h2>
     <vSwitch v-model="value">Title</vSwitch>
   </section>

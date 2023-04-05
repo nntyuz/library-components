@@ -1,5 +1,5 @@
 <template>
-  <section class="card flex a-center j-center column gap-20 w-100">
+  <section class="card">
     <h2>Buttons:</h2>
     <div class="flex a-start j-center wrap gap-20 w-100">
       <div class="flex j-center a-center column gap-20">

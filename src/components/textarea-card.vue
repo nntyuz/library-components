@@ -1,5 +1,5 @@
 <template>
-  <section class="card flex a-center j-center column gap-20 w-100">
+  <section class="card">
     <h2>Textarea:</h2>
     <vTextarea v-model="value" />
   </section>

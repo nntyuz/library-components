@@ -1,5 +1,5 @@
 <template>
-  <section class="card flex a-center j-center column gap-20 w-100">
+  <section class="card">
     <h2>Radio-Buttons:</h2>
     <div class="flex j-center a-center gap-20">
       <vRadio v-model="type" val="Type 1" />

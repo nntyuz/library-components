@@ -1,6 +1,6 @@
 <template>
   <div @click="$emit('click')">
-    <component :is="name" class="icon-component"></component>
+    <component :is="name" class="d-block"></component>
   </div>
 </template>
 
@@ -42,9 +42,3 @@ export default {
   emits: ['click']
 }
 </script>
-
-<style>
-.icon-component {
-  display: block;
-}
-</style>
