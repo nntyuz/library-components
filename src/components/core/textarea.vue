@@ -41,7 +41,6 @@ export default {
   methods: {
     input(e) {
       this.$emit('update:modelValue', e.target.value)
-      e.target.style.height = 'auto'
       e.target.style.height = `${e.target.scrollHeight}px`
     }
   }
