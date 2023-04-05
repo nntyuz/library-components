@@ -14,7 +14,7 @@ export default {
     modelValue: Boolean,
     disabled: Boolean
   },
-  emits: ['click', 'update:modelValue', 'change'],
+  emits: ['update:modelValue', 'click', 'change'],
   computed: {
     classes() {
       const { modelValue, disabled } = this
@@ -28,8 +28,8 @@ export default {
     click() {
       if (this.disabled) return
       const newVal = !this.modelValue
-      this.$emit('click', newVal)
       this.$emit('update:modelValue', newVal)
+      this.$emit('click', newVal)
       this.$emit('change', newVal)
     }
   }
