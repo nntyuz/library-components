@@ -17,7 +17,7 @@ export default {
   name: 'vSlider',
   props: {
     modelValue: {
-      type: [String, Number],
+      type: Number,
       default: 0
     },
     min: {
@@ -28,16 +28,10 @@ export default {
     disabled: Boolean
   },
   emits: ['update:modelValue'],
-  data() {
-    return {
-      currentValue: this.modelValue
-    }
-  },
   computed: {
     classes() {
-      const { disabled } = this
       let result = 'slider-component w-100 flex a-center'
-      if (disabled) result += ' disabled'
+      if (this.disabled) result += ' disabled'
       return result
     }
   }

@@ -29,9 +29,8 @@ export default {
   emits: ['update:modelValue'],
   computed: {
     classes() {
-      const { disabled } = this
       let result = 'radio-button-component c-pointer flex a-center gap-8'
-      if (disabled) result += ' disabled'
+      if (this.disabled) result += ' disabled'
       return result
     },
     isChecked() {
