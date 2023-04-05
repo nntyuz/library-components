@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes" @click="click()">
+  <div :class="classes" @click="click">
     <div class="box flex a-center j-center">
       <vIcon name="check" />
     </div>
