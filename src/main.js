@@ -11,6 +11,7 @@ import vMultiInput from './components/core/multi-input.vue'
 import vSelect from './components/core/select.vue'
 import vSlider from './components/core/slider.vue'
 import vSwitch from './components/core/switch.vue'
+import vProgressCircle from './components/core/progress-circle.vue'
 
 import '../src/assets/styles/main.scss'
 import '../src/assets/styles/reset.scss'
@@ -27,4 +28,5 @@ app
   .component('vSelect', vSelect)
   .component('vSlider', vSlider)
   .component('vSwitch', vSwitch)
+  .component('vProgressCircle', vProgressCircle)
 app.mount('#app')
