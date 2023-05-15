@@ -12,6 +12,7 @@
       <select-card />
       <slider-card />
       <switch-card />
+      <progress-circle-card />
     </div>
   </section>
 </template>
@@ -28,6 +29,7 @@ import multiInputCard from './components/multi-input-card.vue'
 import selectCard from './components/select-card.vue'
 import sliderCard from './components/slider-card.vue'
 import switchCard from './components/switch-card.vue'
+import progressCircleCard from './components/progress-circle-card.vue'
 
 export default {
   components: {
@@ -41,7 +43,8 @@ export default {
     multiInputCard,
     selectCard,
     sliderCard,
-    switchCard
+    switchCard,
+    progressCircleCard
   },
   data() {
     return {}
