@@ -10,6 +10,7 @@
   }
 
   &:hover {
+    color: var(--color-secondary);
     .button {
       border: 1px solid var(--color-secondary);
     }
@@ -43,7 +44,6 @@
 
   input:checked+.button {
     border: 1px solid var(--color-main);
-
     &::before {
       opacity: 1;
     }
@@ -52,7 +52,7 @@
   &.disabled {
     cursor: not-allowed;
     color: var(--color-gray);
-
+    
     .button {
       border: 1px solid var(--color-gray) !important;
 

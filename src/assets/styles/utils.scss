@@ -18,10 +18,6 @@
   background: var(--color-white);
   color: var(--color-main);
   border-radius: var(--border-radius-default);
-
-  &:nth-child(2n) {
-    color: var(--color-secondary);
-  }
 }
 .d {
   &-block {

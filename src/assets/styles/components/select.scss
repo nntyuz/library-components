@@ -11,6 +11,10 @@
   user-select: none;
   transition: var(--transition-default);
 
+  &:hover {
+    cursor: pointer;
+  }
+
   .selected {
     width: 100%;
     color: var(--color-main);
@@ -60,6 +64,7 @@
         &:hover {
           background: var(--color-secondary);
           color: var(--color-white);
+          cursor: pointer;
         }
       }
     }

@@ -6,6 +6,7 @@
   }
 
   &:hover {
+    color: var(--color-secondary);
     .box {
       border: 1px solid var(--color-secondary);
     }
@@ -13,7 +14,6 @@
 
   &.active {
     transition: var(--transition-default);
-
     .box {
       background: var(--color-main);
       border: 1px solid var(--color-main);

@@ -68,15 +68,6 @@
   &.disabled {
     border: 1px solid var(--color-gray);
     color: var(--color-gray);
-    cursor: not-allowed;
-
-    svg {
-      cursor: not-allowed;
-    }
-
-    input {
-      color: var(--color-black);
-      cursor: not-allowed;
-    }
+    pointer-events: none;
   }
 }

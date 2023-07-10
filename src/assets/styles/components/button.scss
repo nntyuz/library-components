@@ -97,4 +97,10 @@
       flex-direction: row-reverse;
     }
   }
+  &.disabled {
+    pointer-events: none;
+    background: var(--color-white);
+    border-color: var(--color-gray);
+    color: var(--color-gray);
+  }
 }
