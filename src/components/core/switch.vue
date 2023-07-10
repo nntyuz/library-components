@@ -1,3 +1,29 @@
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  modelValue: {
+    type: Boolean,
+    default: false
+  },
+  disabled: Boolean
+})
+const emit = defineEmits(['update:modelValue', 'change'])
+
+const classes = computed(() => {
+  let result = 'switch-component flex a-center j-center gap-20'
+  if (props.disabled) result += ' disabled'
+  if (props.modelValue === true) result += ' active'
+  return result
+})
+const click = () => {
+  if (props.disabled) return
+  const newVal = !props.modelValue
+  emit('update:modelValue', newVal)
+  emit('change', newVal)
+}
+</script>
+
 <template>
   <div :class="classes" @click="click">
     <slot />
@@ -6,34 +32,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'vSwitch',
-  props: {
-    modelValue: {
-      type: Boolean,
-      default: false
-    },
-    disabled: Boolean
-  },
-  emits: ['update:modelValue', 'change'],
-  computed: {
-    classes() {
-      const { disabled, modelValue } = this
-      let result = 'switch-component flex a-center j-center gap-20'
-      if (disabled) result += ' disabled'
-      if (modelValue === true) result += ' active'
-      return result
-    }
-  },
-  methods: {
-    click() {
-      if (this.disabled) return
-      const newVal = !this.modelValue
-      this.$emit('update:modelValue', newVal)
-      this.$emit('change', newVal)
-    }
-  }
-}
-</script>

@@ -1,8 +1,38 @@
+<script setup>
+import { computed, defineProps, defineEmits, ref } from 'vue'
+const props = defineProps({
+  modelValue: {
+    type: String,
+    default: null
+  },
+  placeholder: String,
+  options: Array,
+  disabled: Boolean
+})
+const emit = defineEmits(['update:modelValue'])
+
+const isOpen = ref(false)
+const classes = computed(() => {
+  let result = 'select-component flex a-center column'
+  if (props.disabled) result += ' disabled'
+  if (isOpen.value) result += ' open'
+  return result
+})
+const open = () => {
+  if (props.disabled) return
+  isOpen.value = !isOpen.value
+}
+const select = (option) => {
+  emit('update:modelValue', option)
+  isOpen.value = false
+}
+</script>
+
 <template>
   <div :class="classes">
     <div class="selected flex a-center j-between gap-8" @click="open">
       {{ modelValue || placeholder }}
-      <vIcon name="chevronDown" />
+      <CoreIcon name="chevron-down" />
     </div>
     <div class="options">
       <div v-for="(option, idx) in options" :key="idx" class="option" @click="select(option)">
@@ -11,43 +41,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'vSelect',
-  props: {
-    modelValue: {
-      type: String,
-      default: null
-    },
-    placeholder: String,
-    options: Array,
-    disabled: Boolean
-  },
-  emits: ['update:modelValue'],
-  data() {
-    return {
-      isOpen: false
-    }
-  },
-  computed: {
-    classes() {
-      const { disabled, isOpen } = this
-      let result = 'select-component flex a-center column'
-      if (disabled) result += ' disabled'
-      if (isOpen) result += ' open'
-      return result
-    }
-  },
-  methods: {
-    open() {
-      if (this.disabled) return
-      this.isOpen = !this.isOpen
-    },
-    select(option) {
-      this.$emit('update:modelValue', option)
-      this.isOpen = false
-    }
-  }
-}
-</script>

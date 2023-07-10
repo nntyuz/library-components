@@ -1,16 +1,11 @@
+<script setup>
+import { ref } from 'vue'
+const value = ref(false)
+</script>
+
 <template>
   <section class="card">
     <h2>Switch:</h2>
-    <vSwitch v-model="value">Title</vSwitch>
+    <CoreSwitch v-model="value">Title</CoreSwitch>
   </section>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      value: false
-    }
-  }
-}
-</script>

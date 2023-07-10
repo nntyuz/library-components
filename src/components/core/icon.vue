@@ -1,10 +1,6 @@
-<template>
-  <div @click="$emit('click')">
-    <component :is="name" class="d-block"></component>
-  </div>
-</template>
+<script setup>
+import { computed, defineEmits, defineProps } from 'vue'
 
-<script>
 import arrowLeft from '../icons/arrow-left.vue'
 import arrowRight from '../icons/arrow-right.vue'
 import check from '../icons/check.vue'
@@ -19,26 +15,29 @@ import plus from '../icons/plus.vue'
 import search from '../icons/search.vue'
 import success from '../icons/success.vue'
 
-export default {
-  name: 'vIcon',
-  components: {
-    arrowLeft,
-    arrowRight,
-    check,
-    chevronDown,
-    chevronUp,
-    clear,
-    cross,
-    error,
-    eyeOff,
-    eye,
-    plus,
-    search,
-    success
-  },
-  props: {
-    name: String
-  },
-  emits: ['click']
+const props = defineProps({ name: String })
+defineEmits(['click'])
+
+const icons = {
+  'arrow-left': arrowLeft,
+  'arrow-right': arrowRight,
+  'chevron-down': chevronDown,
+  'chevron-up': chevronUp,
+  'eye-off': eyeOff,
+  check: check,
+  clear: clear,
+  cross: cross,
+  error: error,
+  eye: eye,
+  plus: plus,
+  search: search,
+  success: success
 }
+const icon = computed(() => icons[props.name])
 </script>
+
+<template>
+  <div @click="$emit('click')">
+    <component :is="icon" class="d-block"></component>
+  </div>
+</template>

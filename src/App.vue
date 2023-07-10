@@ -1,3 +1,18 @@
+<script setup>
+import headerComponent from './components/header.vue'
+import iconCard from './components/icon-card.vue'
+import buttonCard from './components/button-card.vue'
+import inputCard from './components/input-card.vue'
+import radioButtonCard from './components/radio-button-card.vue'
+import checkboxCard from './components/checkbox-card.vue'
+import textareaCard from './components/textarea-card.vue'
+import multiInputCard from './components/multi-input-card.vue'
+import selectCard from './components/select-card.vue'
+import sliderCard from './components/slider-card.vue'
+import switchCard from './components/switch-card.vue'
+import progressCircleCard from './components/progress-circle-card.vue'
+</script>
+
 <template>
   <section class="w-container flex a-center j-center column gap-20">
     <header-component />
@@ -16,38 +31,3 @@
     </div>
   </section>
 </template>
-
-<script>
-import headerComponent from './components/header.vue'
-import iconCard from './components/icon-card.vue'
-import buttonCard from './components/button-card.vue'
-import inputCard from './components/input-card.vue'
-import radioButtonCard from './components/radio-button-card.vue'
-import checkboxCard from './components/checkbox-card.vue'
-import textareaCard from './components/textarea-card.vue'
-import multiInputCard from './components/multi-input-card.vue'
-import selectCard from './components/select-card.vue'
-import sliderCard from './components/slider-card.vue'
-import switchCard from './components/switch-card.vue'
-import progressCircleCard from './components/progress-circle-card.vue'
-
-export default {
-  components: {
-    headerComponent,
-    iconCard,
-    buttonCard,
-    inputCard,
-    radioButtonCard,
-    checkboxCard,
-    textareaCard,
-    multiInputCard,
-    selectCard,
-    sliderCard,
-    switchCard,
-    progressCircleCard
-  },
-  data() {
-    return {}
-  }
-}
-</script>

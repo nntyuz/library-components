@@ -1,16 +1,11 @@
+<script setup>
+import { ref } from 'vue'
+const value = ref('')
+</script>
+
 <template>
   <section class="card">
     <h2>Textarea:</h2>
-    <vTextarea v-model="value" />
+    <CoreTextarea v-model="value" placeholder="Text here..." />
   </section>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      value: ''
-    }
-  }
-}
-</script>

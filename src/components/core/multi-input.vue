@@ -1,9 +1,43 @@
+<script setup>
+import { computed, defineProps, defineEmits, ref } from 'vue'
+const props = defineProps({
+  type: {
+    type: [String, Number],
+    default: ''
+  },
+  modelValue: {
+    type: [String, Number],
+    default: ''
+  },
+  placeholder: String,
+  required: Boolean,
+  disabled: Boolean
+})
+const emit = defineEmits(['update:modelValue', 'change'])
+
+const isFocus = ref(false)
+const items = ref([])
+const classes = computed(() => {
+  let result = 'multi-input-component flex a-center wrap gap-8'
+  if (props.disabled) result += ' disabled'
+  if (isFocus.value) result += ' focus'
+  return result
+})
+const add = () => {
+  if (props.modelValue !== '') items.value.push(props.modelValue)
+  emit('update:modelValue', '')
+}
+const remove = (idx) => {
+  items.value = items.value.filter((a, index) => index !== idx)
+}
+</script>
+
 <template>
   <div :class="classes">
     <div class="element-container flex a-center wrap gap-8">
       <div v-for="(item, idx) in items" :key="idx" class="element flex a-center j-center gap-8">
         {{ item }}
-        <vIcon name="clear" @click="removeItem(idx)" />
+        <CoreIcon name="clear" @click="remove(idx)" />
       </div>
     </div>
     <input
@@ -12,55 +46,11 @@
       :required="required"
       :placeholder="placeholder"
       :disabled="disabled"
-      @keydown.enter="addElement"
+      @keydown.enter="add"
       @blur="isFocus = false"
       @focus="isFocus = true"
-      @input="$emit('update:modelValue', $event.target.value)"
-      @change="$emit('change', $event.target.value)"
+      @input="emit('update:modelValue', $event.target.value)"
+      @change="emit('change', $event.target.value)"
     />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'vMultiInput',
-  props: {
-    type: {
-      type: [String, Number],
-      default: ''
-    },
-    modelValue: {
-      type: [String, Number],
-      default: ''
-    },
-    placeholder: String,
-    required: Boolean,
-    disabled: Boolean
-  },
-  emits: ['update:modelValue', 'change'],
-  data() {
-    return {
-      items: [],
-      isFocus: false
-    }
-  },
-  computed: {
-    classes() {
-      const { disabled, isFocus } = this
-      let result = 'multi-input-component flex a-center wrap gap-8'
-      if (disabled) result += ' disabled'
-      if (isFocus) result += ' focus'
-      return result
-    }
-  },
-  methods: {
-    addElement() {
-      if (this.modelValue !== '') this.items.push(this.modelValue)
-      this.$emit('update:modelValue', '')
-    },
-    removeItem(idx) {
-      this.items = this.items.filter((a, index) => index !== idx)
-    }
-  }
-}
-</script>

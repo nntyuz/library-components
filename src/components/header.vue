@@ -3,7 +3,3 @@
     <h1 class="title">Vue Library Components</h1>
   </header>
 </template>
-
-<script>
-export default {}
-</script>
