@@ -14,3 +14,14 @@ body {
   font-family: 'Futura', Arial, Helvetica, sans-serif;
   color: var(--color-white);
 }
+
+#custom-cursor {
+  position: absolute;
+  z-index: 9999;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0px 0px -32px;
+  border: 1px solid var(--color-black);
+  border-radius: 100%;
+  pointer-events: none;
+}

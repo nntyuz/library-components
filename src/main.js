@@ -12,6 +12,7 @@ import CoreSelect from './components/core/select.vue'
 import CoreSlider from './components/core/slider.vue'
 import CoreSwitch from './components/core/switch.vue'
 import CoreProgressCircle from './components/core/progress-circle.vue'
+import CoreCustomCursor from './components/core/cursor.vue'
 
 import '../src/assets/styles/main.scss'
 import '../src/assets/styles/reset.scss'
@@ -29,4 +30,5 @@ app
   .component('CoreSlider', CoreSlider)
   .component('CoreSwitch', CoreSwitch)
   .component('CoreProgressCircle', CoreProgressCircle)
+  .component('CoreCustomCursor', CoreCustomCursor)
 app.mount('#app')

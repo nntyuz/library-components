@@ -14,6 +14,7 @@ import progressCircleCard from './components/progress-circle-card.vue'
 </script>
 
 <template>
+  <core-custom-cursor />
   <section class="w-container flex a-center j-center column gap-20">
     <header-component />
     <div class="flex a-center j-center wrap w-100 gap-20">
