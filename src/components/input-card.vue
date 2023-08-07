@@ -22,7 +22,7 @@
       </div>
       <div class="flex j-center a-center column gap-20">
         <h3>Clear Value:</h3>
-        <vInput v-model="clearValue" type="text" placeholder="Right Icon Input" clear />
+        <vInput v-model="clearValue" type="text" placeholder="Clear value" clear />
       </div>
       <div class="flex j-center a-center column gap-20">
         <h3>Icons:</h3>
