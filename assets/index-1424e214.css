@@ -1,0 +1,726 @@
+html {
+  --color-main: #b46060;
+  --color-secondary: #ffbf9b;
+  --color-gradient: linear-gradient(
+    60deg,
+    var(--color-main),
+    var(--color-secondary)
+  );
+  --color-success: #3cc13b;
+  --color-error: #e21143;
+  --color-black: #222;
+  --color-white: #f1f1f1;
+  --color-gray: #d9d9d9;
+  --border-radius-default: 20px;
+  --border-radius-small: 8px;
+  --transition-default: 0.3s ease;
+}
+.w-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-height: 400px;
+  height: auto;
+  padding: 10px;
+  background: var(--color-white);
+  color: var(--color-main);
+  border-radius: var(--border-radius-default);
+}
+.card:nth-child(2n) {
+  color: var(--color-secondary);
+}
+.d-block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.flex.column {
+  flex-direction: column;
+}
+.flex.j-between {
+  justify-content: space-between;
+}
+.flex.j-center {
+  justify-content: center;
+}
+.flex.j-start {
+  justify-content: flex-start;
+}
+.flex.j-end {
+  justify-content: flex-end;
+}
+.flex.a-center {
+  align-items: center;
+}
+.flex.a-end {
+  align-items: flex-end;
+}
+.flex.a-start {
+  align-items: flex-start;
+}
+.flex.wrap {
+  flex-wrap: wrap;
+}
+.flex.shrink-0 {
+  flex-shrink: 0;
+}
+.w-100 {
+  width: 100%;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-8 {
+  gap: 8px;
+}
+.a-right {
+  text-align: right;
+}
+.a-left {
+  text-align: left;
+}
+.a-center {
+  text-align: center;
+}
+.c-pointer {
+  cursor: pointer;
+}
+.c-default {
+  cursor: default;
+}
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.button-component {
+  width: max-content;
+  height: auto;
+  border-radius: var(--border-radius-small);
+}
+.button-component.type-main {
+  background: var(--color-main);
+  color: var(--color-white);
+  border: 1px solid transparent;
+  transition: var(--transition-default);
+}
+.button-component.type-main:hover {
+  background: var(--color-white);
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+}
+.button-component.type-secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: 1px solid transparent;
+  transition: var(--transition-default);
+}
+.button-component.type-secondary:hover {
+  background: var(--color-white);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+.button-component.type-text {
+  background: transparent;
+  color: var(--color-main);
+  transition: var(--transition-default);
+}
+.button-component.type-text:hover {
+  color: var(--color-secondary);
+}
+.button-component.type-outline {
+  background: transparent;
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+  transition: var(--transition-default);
+}
+.button-component.type-outline:hover {
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+.button-component.size-large {
+  padding: 12px 16px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.button-component.size-large svg {
+  width: 20px;
+  height: 20px;
+}
+.button-component.size-medium {
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.button-component.size-medium svg {
+  width: 16px;
+  height: 16px;
+}
+.button-component.size-small {
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.button-component.size-small svg {
+  width: 8px;
+  height: 8px;
+}
+.button-component.icon-position-left {
+  flex-direction: row;
+}
+.button-component.icon-position-right {
+  flex-direction: row-reverse;
+}
+.input-component {
+  position: relative;
+  height: auto;
+  width: max-content;
+  padding: 6px 10px;
+  background: var(--color-white);
+  border: 1px solid var(--color-main);
+  border-radius: var(--border-radius-small);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-main);
+  transition: var(--transition-default);
+}
+.input-component svg {
+  width: 20px;
+  height: 20px;
+}
+.input-component.icon-position-left {
+  flex-direction: row;
+}
+.input-component.icon-position-right {
+  flex-direction: row-reverse;
+}
+.input-component input {
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius-small);
+  color: var(--color-main);
+  background: var(--color-white);
+}
+.input-component input::placeholder {
+  color: var(--color-gray);
+}
+.input-component.focus {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+.input-component.focus input {
+  color: var(--color-secondary);
+}
+.input-component.success {
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
+}
+.input-component.success input {
+  color: var(--color-success);
+}
+.input-component.error {
+  border: 1px solid var(--color-error);
+  color: var(--color-error);
+}
+.input-component.error input {
+  color: var(--color-error);
+}
+.input-component.disabled {
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
+  cursor: not-allowed;
+}
+.input-component.disabled svg {
+  cursor: not-allowed;
+}
+.input-component.disabled input {
+  color: var(--color-black);
+  cursor: not-allowed;
+}
+.radio-button-component {
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 24px;
+  transition: var(--transition-default);
+  color: var(--color-main);
+}
+.radio-button-component input {
+  display: none;
+}
+.radio-button-component:hover .button {
+  border: 1px solid var(--color-secondary);
+}
+.radio-button-component .button {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-main);
+  border-radius: 100%;
+  transition: var(--transition-default);
+}
+.radio-button-component .button:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin: auto;
+  background-color: var(--color-main);
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--transition-default);
+}
+.radio-button-component input:checked + .button {
+  border: 1px solid var(--color-main);
+}
+.radio-button-component input:checked + .button:before {
+  opacity: 1;
+}
+.radio-button-component.disabled {
+  cursor: not-allowed;
+  color: var(--color-gray);
+}
+.radio-button-component.disabled .button {
+  border: 1px solid var(--color-gray) !important;
+}
+.radio-button-component.disabled .button:before {
+  background: var(--color-gray);
+}
+.checkbox-component {
+  transition: var(--transition-default);
+}
+.checkbox-component svg {
+  color: var(--color-white);
+}
+.checkbox-component:hover .box {
+  border: 1px solid var(--color-secondary);
+}
+.checkbox-component.active {
+  transition: var(--transition-default);
+}
+.checkbox-component.active .box {
+  background: var(--color-main);
+  border: 1px solid var(--color-main);
+}
+.checkbox-component.disabled {
+  cursor: not-allowed;
+  color: var(--color-gray);
+  transition: var(--transition-default);
+}
+.checkbox-component.disabled .box {
+  background: var(--color-gray);
+  border: 1px solid var(--color-gray);
+}
+.checkbox-component .box {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-main);
+  border-radius: 4px;
+  transition: var(--transition-default);
+}
+.checkbox-component .box svg {
+  width: 10px;
+  height: 10px;
+}
+.textarea-component {
+  width: max-content;
+  max-width: 400px;
+  min-width: 400px;
+  height: auto;
+  max-height: 400px;
+  padding: 8px;
+  background: var(--color-white);
+  border: 1px solid var(--color-main);
+  border-radius: var(--border-radius-default);
+}
+.textarea-component.focus {
+  border: 1px solid var(--color-secondary);
+}
+.textarea-component textarea {
+  resize: none;
+  width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  max-height: 300px;
+  color: var(--color-main);
+  background: var(--color-white);
+}
+.textarea-component textarea::placeholder {
+  color: var(--color-gray);
+}
+.textarea-component.disabled {
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
+  cursor: not-allowed;
+}
+.textarea-component.disabled textarea {
+  cursor: not-allowed;
+  color: var(--color-black);
+}
+.multi-input-component {
+  position: relative;
+  height: auto;
+  width: max-content;
+  max-width: 250px;
+  padding: 6px 10px;
+  background: var(--color-white);
+  border: 1px solid var(--color-main);
+  border-radius: var(--border-radius-small);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-main);
+  transition: var(--transition-default);
+}
+.multi-input-component svg {
+  width: 20px;
+  height: 20px;
+}
+.multi-input-component input {
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius-small);
+  color: var(--color-main);
+  background: var(--color-white);
+}
+.multi-input-component input::placeholder {
+  color: var(--color-gray);
+}
+.multi-input-component.disabled {
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
+  cursor: not-allowed;
+}
+.multi-input-component.disabled svg {
+  cursor: not-allowed;
+}
+.multi-input-component.disabled input {
+  color: var(--color-black);
+  cursor: not-allowed;
+}
+.multi-input-component.disabled .element {
+  cursor: not-allowed;
+  border: 1px solid var(--color-gray);
+  color: var(--color-black);
+}
+.multi-input-component .element {
+  cursor: default;
+  word-break: break-all;
+  padding: 2px;
+  border: 1px solid var(--color-main);
+  border-radius: var(--border-radius-small);
+  transition: var(--transition-default);
+  color: var(--color-main);
+}
+.multi-input-component .element:hover {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+.multi-input-component .element:hover svg {
+  cursor: pointer;
+}
+.multi-input-component.focus {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+.multi-input-component.focus input {
+  color: var(--color-secondary);
+}
+.select-component {
+  position: relative;
+  width: max-content;
+  max-width: 250px;
+  height: auto;
+  padding: 6px 10px;
+  background: var(--color-white);
+  border: 1px solid var(--color-main);
+  border-radius: var(--border-radius-small);
+  color: var(--color-main);
+  user-select: none;
+  transition: var(--transition-default);
+}
+.select-component .selected {
+  width: 100%;
+  color: var(--color-main);
+  transition: var(--transition-default);
+}
+.select-component svg {
+  transition: var(--transition-default);
+}
+.select-component .options {
+  display: none;
+}
+.select-component.open {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+.select-component.open .selected {
+  color: var(--color-secondary);
+}
+.select-component.open .selected svg {
+  transform: rotate(180deg);
+  color: var(--color-secondary);
+}
+.select-component.open .options {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1px;
+  background: var(--color-white);
+  border: 1px solid var(--color-main);
+  border-radius: var(--border-radius-small);
+}
+.select-component.open .options .option {
+  width: 100%;
+  height: auto;
+  padding: 6px 10px;
+  background: var(--color-white);
+  color: var(--color-main);
+  border-radius: var(--border-radius-small);
+}
+.select-component.open .options .option:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+.select-component.disabled {
+  cursor: not-allowed;
+  color: var(--color-gray);
+  transition: var(--transition-default);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray);
+}
+.select-component.disabled .selected {
+  color: var(--color-gray);
+}
+.slider-component {
+  max-width: 300px;
+}
+.slider-component .slider {
+  appearance: none;
+  height: auto;
+  max-height: 6px;
+  border-radius: 10px;
+  background: var(--color-main);
+  outline: none;
+  transition: var(--transition-default);
+}
+.slider-component .slider:hover {
+  cursor: pointer;
+}
+.slider-component .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--color-main);
+  background: var(--color-white);
+  cursor: ew-resize;
+  border-radius: 50%;
+}
+.slider-component .slider::-moz-range-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--color-main);
+  background: var(--color-white);
+  cursor: ew-resize;
+  border-radius: 50%;
+}
+.slider-component.disabled .slider {
+  background: var(--color-gray);
+}
+.slider-component.disabled .slider:hover {
+  cursor: not-allowed;
+}
+.slider-component.disabled .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 4px solid var(--color-gray);
+  cursor: not-allowed;
+}
+.slider-component.disabled .slider::-moz-range-thumb {
+  border: 4px solid var(--color-gray);
+  cursor: not-allowed;
+}
+.switch-component {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  color: var(--color-main);
+}
+.switch-component.active .track {
+  background: var(--color-main);
+}
+.switch-component.active .circle {
+  background: var(--color-white);
+  transform: translate3d(94%, 0, 0);
+}
+.switch-component.disabled {
+  outline: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: var(--color-gray);
+}
+.switch-component.disabled .track {
+  border: 2px solid var(--color-gray);
+}
+.switch-component.disabled .circle {
+  background: var(--color-gray);
+}
+.switch-component .track {
+  box-sizing: border-box;
+  max-width: 48px;
+  height: 28px;
+  padding: 0 1px;
+  background: var(--color-white);
+  border: 2px solid var(--color-main);
+  border-radius: var(--border-radius-default);
+  transition: var(--transition-default);
+}
+.switch-component .circle {
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+  background: var(--color-main);
+  border-radius: 50%;
+  transition: var(--transition-default);
+}
+.progress-circle-component {
+  position: relative;
+  width: 106px;
+  height: 106px;
+  border: 1px solid var(--color-main);
+  background: conic-gradient(var(--color-main) 0deg, var(--color-white) 0deg);
+  border-radius: 100%;
+}
+.progress-circle-component:after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background: var(--color-white);
+  border-radius: 100%;
+  border: 1px solid var(--color-main);
+}
+.progress-circle-component .percent {
+  z-index: 9;
+}
+.header-component {
+  padding: 20px;
+  background: var(--color-white);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.header-component .title {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  max-width: 1600px;
+  min-width: 375px;
+  background: var(--color-black);
+  font-family: Futura, Arial, Helvetica, sans-serif;
+  color: var(--color-white);
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+button,
+input,
+select,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+button {
+  overflow: visible;
+  text-transform: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
